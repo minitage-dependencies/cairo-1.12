@@ -1,0 +1,12 @@
+*.pyc
+.download
+.installed.cfg
+bin
+parts
+
+.minitage
+sys/
+__minitage__part__tmp/
+*.pyc
+.installed.cfg
+*.pyc

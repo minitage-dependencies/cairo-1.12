@@ -1,0 +1,39 @@
+diff -ur cairo-1.8.8/configure cairo-1.8.8.new/configure
+--- cairo-1.8.8/configure	2009-06-16 14:25:50.000000000 +0200
++++ cairo-1.8.8.new/configure	2009-12-05 18:26:15.953125000 +0100
+@@ -8728,7 +8728,7 @@
+       export_symbols_cmds='$NM $libobjs $convenience | $global_symbol_pipe | $SED -e '\''/^[BCDGRS][ ]/s/.*[ ]\([^ ]*\)/\1 DATA/'\'' | $SED -e '\''/^[AITW][ ]/s/.*[ ]//'\'' | sort | uniq > $export_symbols'
+ 
+       if $LD --help 2>&1 | $GREP 'auto-import' > /dev/null; then
+-        archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
++        archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags -lpng12 -lpng -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker  $lib'
+ 	# If the export-symbols file already is a .def file (1st line
+ 	# is EXPORTS), use it as is; otherwise, prepend...
+ 	archive_expsym_cmds='if test "x`$SED 1q $export_symbols`" = xEXPORTS; then
+@@ -8737,7 +8737,7 @@
+ 	  echo EXPORTS > $output_objdir/$soname.def;
+ 	  cat $export_symbols >> $output_objdir/$soname.def;
+ 	fi~
+-	$CC -shared $output_objdir/$soname.def $libobjs $deplibs $compiler_flags -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
++	$CC -shared $output_objdir/$soname.def $libobjs $deplibs $compiler_flags -lpng12 -lpng -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
+       else
+ 	ld_shlibs=no
+       fi
+@@ -14985,7 +14985,7 @@
+         enable_shared_with_static_runtimes_CXX=yes
+ 
+         if $LD --help 2>&1 | $GREP 'auto-import' > /dev/null; then
+-          archive_cmds_CXX='$CC -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
++          archive_cmds_CXX='$CC -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -lpng12 -lpng -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
+           # If the export-symbols file already is a .def file (1st line
+           # is EXPORTS), use it as is; otherwise, prepend...
+           archive_expsym_cmds_CXX='if test "x`$SED 1q $export_symbols`" = xEXPORTS; then
+@@ -14994,7 +14994,7 @@
+ 	    echo EXPORTS > $output_objdir/$soname.def;
+ 	    cat $export_symbols >> $output_objdir/$soname.def;
+           fi~
+-          $CC -shared -nostdlib $output_objdir/$soname.def $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
++          $CC -shared -nostdlib $output_objdir/$soname.def $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -lpng12 -lpng -o $output_objdir/$soname ${wl}--enable-auto-image-base -Xlinker --out-implib -Xlinker $lib'
+         else
+           ld_shlibs_CXX=no
+         fi
